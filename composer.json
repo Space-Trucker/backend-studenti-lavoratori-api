@@ -1,10 +1,20 @@
 {
-    "name": "your-name/your-project",
-    "description": "Project with Railway MySQL",
+    "name": "space-trucker/backend-studenti-lavoratori",
+    "description": "Backend API with Railway MySQL",
+    "type": "project",
     "require": {
-        "php": ">=8.0"
+        "php": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
     },
     "scripts": {
         "start": "php -S 0.0.0.0:$PORT -t public/"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist"
     }
 }
