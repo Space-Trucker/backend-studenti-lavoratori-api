@@ -40,6 +40,12 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        // ADD THIS API GUARD HERE FOR SANCTUM
+        'api' => [
+            'driver' => 'sanctum',
+            'provider' => 'users', // This typically points to your 'users' provider below
+        ],
     ],
 
     /*
@@ -67,7 +73,7 @@ return [
 
         // 'users' => [
         //     'driver' => 'database',
-        //     'table' => 'users',
+        //     // 'table' => 'users', // Commented out by default if using Eloquent
         // ],
     ],
 
